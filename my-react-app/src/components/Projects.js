@@ -1,37 +1,24 @@
-import React, { useState } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
+import React from "react";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([...Array(10).keys()]);
-  const fetchMoreData = () => {
-    // Simulating the fetching of more data.
-    setTimeout(() => {
-      setProjects((prevProjects) => [
-        ...prevProjects,
-        ...Array(5).fill(0).map((_, index) => index + prevProjects.length),
-      ]);
-    }, 1500);
-  };
+  const museums = [
+    "Metropolitan Museum of Art",
+    "Museum of the City of New York",
+    "Brooklyn Museum",
+    "The Frick Museum",
+    "Boston Museum of Fine Art",
+    "Seattle Museum of Art",
+    "Getty Museum of Art",
+  ];
 
   return (
     <div className="projects">
-      <h2>Construction Projects</h2>
-      <InfiniteScroll
-        dataLength={projects.length}
-        next={fetchMoreData}
-        hasMore={true}
-        loader={<h4>Loading...</h4>}
-      >
-        {projects.map((project) => (
-          <div className="project" key={project}>
-            <h3>Project {project}</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              euismod suscipit mauris, vitae faucibus neque pellentesque at.
-            </p>
-          </div>
+      <h2>Museums Traditional Line Has Worked At</h2>
+      <ul>
+        {museums.map((museum, index) => (
+          <li key={index}>{museum}</li>
         ))}
-      </InfiniteScroll>
+      </ul>
     </div>
   );
 };
