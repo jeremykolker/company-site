@@ -1,2 +1,2 @@
 
-company website in progresss
+company website in progress
