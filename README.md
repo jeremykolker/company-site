@@ -1,1 +1,2 @@
-company website in progres
+company website in progress
+
