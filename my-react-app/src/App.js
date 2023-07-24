@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import logo from "/Users/jeremykolker/dev/Ollivanders/company-site/my-react-app/src/components/TLLogo.png"
 
 const museumsData = [
   "Metropolitan Museum of Art",
@@ -58,13 +59,16 @@ const App = () => {
   return (
     <div className="App">
       <header className="navbar">
-        <h1>Traditional Line</h1>
+        
+     <img src={logo} alt="Logo" />
+
+
       </header>
       <main className="content">
       <div className="home">
-      <h2>Welcome to Traditional Line Ltd.</h2>
+      <h2>Traditional Line</h2>
       <p>
-        Established in 1984, Traditional Line is a general contractor and architectural restorer with a long history of historic preservation for museums and civic and cultural institutions. We take pride in our exceptional reputation, technical expertise, and ability to manage projects of any size while guaranteeing consistency in quality and efficient problem-solving and scheduling.
+      Established in 1984, Traditional Line is a general contractor and architectural restorer based in Manhattan, New York City. In addition to the residential renovations that form the core of our business, Traditional Line has a long history of historic preservation for museums and civic and cultural institutions.
       </p>
       <p>
         Our attention to detail and workmanship is unparalleled, and we specialize in creative solutions and custom work. We employ an in-house staff of project managers, carpenters, wood finishers, specialized workers, helpers, and an administrative team, ensuring personal attention for every project.
